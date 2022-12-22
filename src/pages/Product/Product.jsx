@@ -28,7 +28,7 @@ const Product = () => {
         quantity,
       })
     );
-    dispatch(handleCart())
+    dispatch(handleCart(true))
   };
 
   return (

@@ -26,8 +26,8 @@ export const cartSlice = createSlice({
         resetCart: (state) => {
             state.products = []
         },
-        handleCart: (state) => {
-            state.cartOpen = true
+        handleCart: (state, action) => {
+            state.cartOpen = action.payload
         }
     },
 })
