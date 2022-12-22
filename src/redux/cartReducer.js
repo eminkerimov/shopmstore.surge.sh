@@ -27,7 +27,7 @@ export const cartSlice = createSlice({
             state.products = []
         },
         handleCart: (state) => {
-            state.cartOpen = !state.cartOpen
+            state.cartOpen = true
         }
     },
 })
