@@ -6,7 +6,7 @@ import BalanceIcon from "@mui/icons-material/Balance";
 import { useParams } from "react-router-dom";
 import useFetch from "../../custom/useFetch";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/cartReducer.js";
+import { addToCart, handleCart } from "../../redux/cartReducer.js";
 
 const Product = () => {
   const id = useParams().id;
@@ -16,6 +16,20 @@ const Product = () => {
   const dispatch = useDispatch();
 
   const { data, loading, error } = useFetch(`/product/${id}`);
+
+  const handleAdd = () => {
+    dispatch(
+      addToCart({
+        id: data.id,
+        title: data.title,
+        desc: data.desc,
+        price: data.price,
+        img: data.img,
+        quantity,
+      })
+    );
+    dispatch(handleCart())
+  };
 
   return (
     <div className="product">
@@ -37,10 +51,7 @@ const Product = () => {
               />
             </div>
             <div className="mainImg">
-              <img
-                src={data?.[selectedImg]}
-                alt=""
-              />
+              <img src={data?.[selectedImg]} alt="" />
             </div>
           </div>
           <div className="right">
@@ -60,18 +71,7 @@ const Product = () => {
             </div>
             <button
               className="add"
-              onClick={() =>
-                dispatch(
-                  addToCart({
-                    id: data.id,
-                    title: data.title,
-                    desc: data.desc,
-                    price: data.price,
-                    img: data.img,
-                    quantity,
-                  })
-                )
-              }
+              onClick={handleAdd}
             >
               <AddShoppingCartIcon /> ADD TO CART
             </button>
@@ -85,14 +85,9 @@ const Product = () => {
             </div>
             <div className="info">
               <span>Vendor: Polo</span>
+              <span>Product Type: {data?.sub_category}</span>
               <span>
-                Product Type:{" "}
-                {data?.sub_category}
-              </span>
-              <span>
-                Tag:{" "}
-                {data?.sub_category}
-                , {data?.type}
+                Tag: {data?.sub_category}, {data?.type}
               </span>
             </div>
             <hr />

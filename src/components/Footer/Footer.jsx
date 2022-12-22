@@ -8,19 +8,19 @@ const Footer = () => {
       <div className="footer__top">
         <div className="item wSmall">
           <h1>Categories</h1>
-          <Link className="link" to="/product/1">
+          <Link className="link" to="/products/1">
             Women
           </Link>
-          <Link className="link" to="/product/2">
+          <Link className="link" to="/products/2">
             Men
           </Link>
-          <Link className="link" to="/product/3">
+          <Link className="link" to="/products/3">
             Children
           </Link>
-          <Link className="link" to="/product/3">
+          <Link className="link" to="/products/3">
             Accessories
           </Link>
-          <Link className="link" to="/product/3">
+          <Link className="link" to="/products/3">
             New Arrivals
           </Link>
         </div>
