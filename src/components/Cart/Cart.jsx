@@ -4,6 +4,7 @@ import "./Cart.scss";
 import {useSelector} from "react-redux";
 import { removeItem, resetCart } from '../../redux/cartReducer';
 import { useDispatch } from "react-redux";
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -40,7 +41,7 @@ const Cart = () => {
             <span>TOTAL</span>
             <span>${totalPrice()}</span>
         </div>
-        <button>PROCEED TO CHECKOUT</button>
+        <button><Link className="link" to="/payment">PROCEED TO CHECKOUT</Link></button>
         {(products.length > 0) && <span className="reset" onClick={()=>dispatch(resetCart())}>Reset Cart</span>}
     </div>
   )

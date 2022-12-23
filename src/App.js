@@ -11,6 +11,7 @@ import Products from "./pages/Products/Products";
 import "./app.scss"
 import ScrollToTop from "./helpers/ScrollToTop";
 import About from "./pages/About/About";
+import Payment from "./pages/Payment/Payment";
 
 const Layout = () => {
   return (
@@ -43,6 +44,10 @@ const router =createBrowserRouter([
       {
         path:"/about",
         element:<About/>
+      },
+      {
+        path:"/payment",
+        element:<Payment/>
       },
     ]
   }

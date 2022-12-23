@@ -9,17 +9,19 @@ import "./Navbar.scss"
 import Cart from "../Cart/Cart";
 import {useSelector, useDispatch} from "react-redux";
 import { handleCart } from "../../redux/cartReducer";
+import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
   const products = useSelector(state=>state.cart.products);
   const isCartOpen = useSelector(state=>state.cart.cartOpen);
+  const location = useLocation().pathname;
 
   const dispatch = useDispatch();
 
   useEffect(() => {
       dispatch(handleCart(false))
-  }, []);
+  }, [location]);
 
   return (
     <div className="navbar">
