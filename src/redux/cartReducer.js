@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     products: [],
     cartOpen: false,
+    total: 0,
 }
 
 export const cartSlice = createSlice({
@@ -28,11 +29,14 @@ export const cartSlice = createSlice({
         },
         handleCart: (state, action) => {
             state.cartOpen = action.payload
+        },
+        totalCart: (state, action) => {
+            state.total = action.payload
         }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { addToCart, removeItem, resetCart, handleCart } = cartSlice.actions
+export const { addToCart, removeItem, resetCart, handleCart, totalCart } = cartSlice.actions
 
 export default cartSlice.reducer
