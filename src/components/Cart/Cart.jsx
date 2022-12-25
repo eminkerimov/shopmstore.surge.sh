@@ -4,21 +4,26 @@ import "./Cart.scss";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart, totalCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
-  const [totalPrice, setTotalPrice] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0);
+  const navigate = useNavigate();
+
+  const handlePayment = () => {
+    dispatch(totalCart(totalPrice));
+    navigate("./payment");
+  };
 
   useEffect(() => {
-      let total = 0;
-      products.forEach((item) => {
-        total += item.quantity * item.price;
-      });
-      setTotalPrice(total.toFixed(2));
+    let total = 0;
+    products.forEach((item) => {
+      total += item.quantity * item.price;
+    });
+    setTotalPrice(total.toFixed(2));
   }, [products]);
-
 
   return (
     <div className="cart">
@@ -47,12 +52,8 @@ const Cart = () => {
         <span>TOTAL</span>
         <span>${totalPrice}</span>
       </div>
-      <button
-      onClick={() => dispatch(totalCart(totalPrice))}
-      >
-        <Link className="link" to="/payment">
+      <button onClick={handlePayment}>
           PROCEED TO CHECKOUT
-        </Link>
       </button>
       {products.length > 0 && (
         <span className="reset" onClick={() => dispatch(resetCart())}>

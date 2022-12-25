@@ -1,13 +1,18 @@
 import React from "react";
 import "./Payment.scss";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { resetCart } from "../../redux/cartReducer";
 
 const Payment = () => {
   const total = useSelector((state) => state.cart.total);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handlePay = () => {
+    navigate("/");
+    dispatch(resetCart());
+  };
 
   return (
     <div className="payment">
@@ -67,9 +72,7 @@ const Payment = () => {
             placeholder=""
           />
         </div>
-        <Link className="link" to="/">
-          <button onClick={() => dispatch(resetCart())}>Pay</button>
-        </Link>
+          <button onClick={handlePay}>Pay</button>
       </div>
     </div>
   );
