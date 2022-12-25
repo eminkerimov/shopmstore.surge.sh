@@ -30,6 +30,16 @@
         &__item {
             display: flex;
             flex-direction: column;
+            img {
+                position: absolute;
+                top: 22px;
+                right: 55px;
+                width: 45px;
+                &:last-of-type{
+                    right: 10px;
+                }
+            }
+
             .flex {
                 display: flex;
                 input {

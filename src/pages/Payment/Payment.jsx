@@ -40,7 +40,7 @@ const Payment = () => {
           <span className="payment__right__item-label">Email</span>
           <input required className="payment__right__item-input" type="text" />
         </div>
-        <div className="payment__right__item">
+        <div className="payment__right__item" style={{position: "relative"}}>
           <span className="payment__right__item-label">Card information</span>
           <input
             required
@@ -48,6 +48,8 @@ const Payment = () => {
             type="text"
             placeholder="1234 1234 1234 1234"
           />
+          <img src="https://cdn.worldvectorlogo.com/logos/visa.svg" alt="" />
+          <img src="https://cdn.worldvectorlogo.com/logos/mastercard-6.svg" alt="" />
           <div className="flex">
             <input
               required
