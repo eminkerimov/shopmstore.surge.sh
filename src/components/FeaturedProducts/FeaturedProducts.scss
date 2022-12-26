@@ -24,3 +24,27 @@
         flex-wrap: wrap;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .featuredProducts {
+        margin: 30px 50px;
+    
+        .top {
+            flex-direction: column;
+            margin-bottom: 30px;
+    
+            h1 {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    
+        .bottom {
+        justify-content: center;
+        }
+    }
+}

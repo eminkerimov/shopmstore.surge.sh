@@ -26,6 +26,11 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
+        <div className="mobilBtn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <div className="left">
           <div className="item">
             <img src="/img/flag.png" alt="flag" />
@@ -72,6 +77,7 @@ const Navbar = () => {
         </div>
         </div>
       </div>
+      <div className="mobil"></div>
       {isCartOpen && <Cart/>}
     </div>
   );
