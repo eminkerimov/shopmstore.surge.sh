@@ -38,12 +38,11 @@ const Payment = () => {
         <h1>Pay with card</h1>
         <div className="payment__right__item">
           <span className="payment__right__item-label">Email</span>
-          <input required className="payment__right__item-input" type="text" />
+          <input className="payment__right__item-input" type="text" />
         </div>
         <div className="payment__right__item" style={{position: "relative"}}>
           <span className="payment__right__item-label">Card information</span>
           <input
-            required
             className="payment__right__item-input"
             type="text"
             placeholder="1234 1234 1234 1234"
@@ -52,13 +51,11 @@ const Payment = () => {
           <img src="https://cdn.worldvectorlogo.com/logos/mastercard-6.svg" alt="" />
           <div className="flex">
             <input
-              required
               className="payment__right__item-input"
               type="text"
               placeholder="MM/YY"
             />
             <input
-              required
               className="payment__right__item-input"
               type="text"
               placeholder="CVC"
@@ -68,7 +65,6 @@ const Payment = () => {
         <div className="payment__right__item">
           <span className="payment__right__item-label">Name on card</span>
           <input
-            required
             className="payment__right__item-input"
             type="text"
             placeholder=""
