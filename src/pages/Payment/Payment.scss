@@ -86,3 +86,18 @@
         }
     }
 } 
+
+@media only screen and (max-width: 550px) {
+.payment {
+    flex-direction: column;
+    align-items: center;
+    &__left{
+        padding: 20px;
+        height: 100%;
+    }
+    &__right{
+    padding: 20px;
+    height: 100%;
+    }
+}
+    }
