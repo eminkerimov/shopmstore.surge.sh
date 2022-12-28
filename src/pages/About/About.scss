@@ -29,3 +29,37 @@
         }
     }
 }
+
+// Responsive
+
+@media only screen and (max-width: 991px) {
+    .aboutPage .main {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutPage {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .aboutPage {
+    
+        .main {
+            gap: 20px;
+            padding: 30px 40px;
+    
+    
+            h1 {
+                font-size: 25px;
+                        }
+    
+            p {
+                font-size: 13px;
+                letter-spacing: auto;
+            }
+        }
+    }
+}

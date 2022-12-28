@@ -12,11 +12,13 @@ import "./app.scss"
 import ScrollToTop from "./helpers/ScrollToTop";
 import About from "./pages/About/About";
 import Payment from "./pages/Payment/Payment";
+import Mobil from "./components/Mobil/Mobil";
 
 const Layout = () => {
   return (
     <div className="app">
       <ScrollToTop />
+      <Mobil/>
       <Navbar/>
       <Outlet/>
       <Footer/>
