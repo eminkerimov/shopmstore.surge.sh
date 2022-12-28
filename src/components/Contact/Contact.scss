@@ -12,19 +12,24 @@
         align-items: center;
         justify-content: space-between;
 
-        input {
-            padding: 10px;
-            border: none;
-            border-radius: 5px 0 0 5px;
+        .mail {
+            width: max-content;
+
+            input {
+                padding: 10px;
+                border: none;
+                border-radius: 5px 0 0 5px;
+            }
+
+            button {
+                padding: 10px;
+                color: #fff;
+                background: #333;
+                border-radius: 0 5px 5px 0;
+                border: none;
+            }
         }
 
-        button {
-            padding: 10px;
-            color: #fff;
-            background: #333;
-            border-radius: 0 5px 5px 0;
-            border: none;
-        }
 
         .icons {
             display: flex;
@@ -57,19 +62,18 @@
     .contact {
 
         .wrapper {
-
-            span,
-            .mail {
-                width: 40%;
-            }
-
-            .icons {
-                width: 100%;
-            }
+            width: 90%;
         }
     }
 }
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    .contact {
 
-@media only screen and (max-width: 550px) {}
+        .wrapper {
+            flex-direction: column;
+            gap: 10px;
+
+        }
+    }
+}

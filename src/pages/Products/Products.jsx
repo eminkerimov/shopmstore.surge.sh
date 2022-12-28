@@ -42,7 +42,7 @@ const Products = () => {
         </div>
         <div className="filterItem">
           <h2>Filter by price</h2>
-          <div className="inputItem">
+          <div className="inputItem forRange">
             <span>0</span>
             <input
               className="range"

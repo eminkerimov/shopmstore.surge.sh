@@ -93,3 +93,19 @@
     transform: scale(1.3) rotate(-5deg);
   }
 }
+
+// Responsive----------------------
+
+@media only screen and (max-width: 767px) {
+  .categories {
+    flex-direction: column;
+    height: auto;
+  
+    .row {
+      img {
+        max-height: 300px;
+      }
+    }
+
+  }
+}
