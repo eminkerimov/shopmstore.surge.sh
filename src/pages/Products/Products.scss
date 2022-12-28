@@ -53,36 +53,54 @@
 @media only screen and (max-width: 550px) {
     .products {
         padding: 0 0 0 20px;
-    
+
         .left {
             top: 30px;
-            .filterItem{
+
+            .filterItem {
                 h2 {
                     margin: 10px 0 10px;
                     font-size: 20px;
                 }
+
                 .inputItem {
                     margin-bottom: 5px;
+
                     .range {
                         margin: 5px 0px;
                         max-width: 100%;
                     }
                 }
+
                 .forRange {
                     display: flex;
                     flex-direction: column;
+
                     span:last-child {
                         align-self: flex-end;
                     }
                 }
             }
         }
-    
+
         .right {
             flex: 3;
+
             .catImg {
                 height: 150px;
                 margin-bottom: 30px;
+            }
+
+            .list {
+                gap: 10px;
+
+                a .card {
+                    width: 200px;
+
+                    .image {
+                        height: 330px;
+                    }
+                }
             }
         }
     }
