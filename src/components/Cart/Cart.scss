@@ -99,3 +99,34 @@
         cursor: pointer;
     }
 }
+
+//Responsive
+
+@media only screen and (max-width: 550px) {
+    .cart {
+           right: 0;
+           padding: 15px;
+           min-width: auto;
+           width: 240px;
+           h1{
+            margin-bottom: 20px;
+            font-size: 20px;
+           }
+           .item {
+            margin-bottom: 15px;
+            .details {
+                h1,p {
+                    margin-bottom: 2px;
+                }
+            }
+           }
+           .total {
+            margin-bottom: 10px;
+           }
+           button {
+            margin-bottom: 10px;
+            padding: 6px;
+           }
+       }
+   
+}
