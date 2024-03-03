@@ -17,7 +17,7 @@ const Categories = () => {
         </div>
         <div className="row animationL">
           <img
-            src="https://www.globalblue.com/brands/specials/john-lewis-partners/article933442.ece/BINARY/john_lewis_partners_womenswear_aw19_teaser.jpg"
+            src="https://wallpapercosmos.com/w/full/8/6/5/1224722-2560x1600-desktop-hd-fashion-model-background.jpg"
             alt=""
           />
             <Link className="link animated-border" to="/products/1">

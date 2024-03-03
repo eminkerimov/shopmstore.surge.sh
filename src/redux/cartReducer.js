@@ -32,7 +32,8 @@ export const cartSlice = createSlice({
         },
         totalCart: (state, action) => {
             state.total = action.payload
-        }
+        },
+        
     },
 })
 
