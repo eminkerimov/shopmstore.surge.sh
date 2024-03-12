@@ -9,7 +9,7 @@ const Slider = () => {
 
   const data = [
     "https://cdn.shopify.com/s/files/1/0310/3571/9739/articles/17-best-male-model-poses-for-photoshoots-956272.jpg?v=1597172634",
-    "https://i.pinimg.com/originals/1a/e4/6b/1ae46bf7c39bd8bbade070c4da15e993.jpg",
+    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/03/young-fashionable-couple-against-blue-background.jpg",
   ];
 
